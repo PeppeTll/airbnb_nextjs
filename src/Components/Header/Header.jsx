@@ -13,8 +13,6 @@ const Header = () => {
 		setUser(JSON.parse(localStorage.getItem("authUser")));
 	}, [router.asPath]);
 
-	console.log(router);
-
 	return (
 		<div className={styles.Header}>
 			<Image src={Logo} alt="logo" className={styles.Header__logo} />
@@ -28,10 +26,11 @@ const Header = () => {
 				<li className={styles.Header__ul__li}>
 					<Link href="/contacts">Contacts</Link>
 				</li>
-				<li className={styles.Header__ul__li}>
-					<Link href="/login">Login</Link>
-				</li>
-				{user && (
+				{!user ? (
+					<li className={styles.Header__ul__li}>
+						<Link href="/login">Login</Link>
+					</li>
+				) : (
 					<li className={styles.Header__ul__li}>
 						<Link href="/dashboard">Dashboard</Link>
 					</li>

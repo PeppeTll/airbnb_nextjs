@@ -1,38 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Creare una versione dell'esercizio 1 anche in CSR (con useEffect) e scrivere tutte le differenze tra CSR e SSR.
 
-## Getting Started
+## CSR (Client-Side Rendering), o rendering lato client, è un metodo in cui l'applicazione viene caricata sul lato client, cioè nel browser dell'utente. Quando un utente accede a una pagina, viene caricato un file JavaScript che contiene il codice dell'applicazione. Successivamente, il browser esegue il codice JavaScript e si occupa di renderizzare la pagina. Questo significa che l'utente deve attendere il caricamento iniziale dell'applicazione prima di poter visualizzare il contenuto. Una volta che il codice viene eseguito, l'applicazione può interagire con il server per recuperare i dati necessari.
 
-First, run the development server:
+## SSR (Server-Side Rendering), o rendering lato server, invece, carica e renderizza le pagine sul server prima di inviarle al browser dell'utente. Quando un utente accede a una pagina, il server esegue il codice dell'applicazione e restituisce direttamente l'HTML completo al browser. Ciò significa che l'utente può vedere il contenuto della pagina immediatamente, senza dover attendere il caricamento dell'applicazione nel browser. L'applicazione può comunque interagire con il server per ottenere dati aggiornati o per eseguire operazioni specifiche lato client.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Quindi, in sintesi:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Con CSR, l'applicazione viene caricata nel browser dell'utente e si occupa di renderizzare le pagine dopo il caricamento iniziale. È necessario attendere il caricamento prima di visualizzare il contenuto.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Con SSR, l'applicazione viene caricata e renderizzata sul server e inviata al browser come HTML completo. L'utente può vedere il contenuto immediatamente.

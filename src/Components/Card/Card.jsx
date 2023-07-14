@@ -1,8 +1,15 @@
 import styles from "./index.module.scss";
+import { useRouter } from "next/router";
 
 const Card = ({ data }) => {
+	const router = useRouter();
+
+	const onHandleClick = () => {
+		router.push(`/location/${data.id}`);
+	};
+
 	return (
-		<div className={styles.Card}>
+		<div className={styles.Card} onClick={onHandleClick}>
 			<img src={data.thumbnail} alt={data.title} className={styles.Card__img} />
 			<div className={styles.Card__info}>
 				<div className={styles.Card__info__title}>
